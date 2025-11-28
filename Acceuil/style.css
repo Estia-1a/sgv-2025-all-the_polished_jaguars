@@ -1,0 +1,82 @@
+/* --- Faire en sorte que le footer reste en bas --- */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Style général --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef6f4;
+    color: #333;
+}
+
+/* --- HEADER + NAVIGATION --- */
+header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Met Se connecter à droite */
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton Se connecter */
+.login-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #7fb4a6;
+}
+
+/* --- SECTION PRINCIPALE --- */
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.contenu {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #2f3e46;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Fixe en bas */
+}
