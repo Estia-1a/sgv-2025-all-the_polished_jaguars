@@ -15,39 +15,13 @@ header {
     color: white;
     padding: 20px;
     display: flex;
+    justify-content: center;   /* CENTRAGE DU TITRE */
     align-items: center;
-    justify-content: space-between;
 }
 
-nav {
-    flex: 1;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.login-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 6px 12px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.login-btn:hover {
-    background-color: white;
-    color: #7fb4a6;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
 /* --- CONTENEUR FORMULAIRE --- */
@@ -77,7 +51,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* --- BOUTON "MODIFIER MOT DE PASSE" (cliquer sans action) --- */
+/* --- BOUTON "MODIFIER MOT DE PASSE" --- */
 .mode-btn {
     background-color: #dfe7e5;
     border: 1px solid #a9b7b3;
