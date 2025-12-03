@@ -1,0 +1,114 @@
+/* --- STRUCTURE GÉNÉRALE --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #eef6f4;
+    color: #333;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;   /* CENTRAGE DU TITRE */
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* --- CONTENEUR FORMULAIRE --- */
+.reset-container {
+    background-color: white;
+    width: 50%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* --- FORMULAIRE --- */
+.reset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reset-form input {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* --- BOUTON "MODIFIER MOT DE PASSE" --- */
+.mode-btn {
+    background-color: #dfe7e5;
+    border: 1px solid #a9b7b3;
+    padding: 12px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+.mode-btn:hover {
+    background-color: #cfd9d7;
+}
+
+.mode-btn:active {
+    background-color: #bfcac8;
+    transform: scale(0.98);
+}
+
+/* --- BOUTON PRINCIPAL --- */
+.reset-form button[type="submit"] {
+    background-color: #7fb4a6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 60%;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.reset-form button[type="submit"]:hover {
+    background-color: #6aa191;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #2f3e46;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .reset-container {
+        width: 90%;
+    }
+
+    .reset-form input,
+    .mode-btn,
+    .reset-form button[type="submit"] {
+        width: 100%;
+    }
+}
