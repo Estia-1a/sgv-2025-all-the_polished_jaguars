@@ -9,34 +9,45 @@ html, body {
     color: #333;
 }
 
-/* --- HEADER --- */
+/* --- HEADER + NAVIGATION --- */
 header {
     background-color: #7fb4a6;
     color: white;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
-
-header h1 {
-    margin: 0;
-}
-
+ 
 nav {
     flex: 1;
     text-align: center;
 }
-
+ 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
-
+ 
 nav a:hover {
     text-decoration: underline;
+}
+ 
+.login-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+ 
+.login-btn:hover {
+    background-color: white;
+    color: #7fb4a6;
 }
 
 /* --- SECTION D’ACCUEIL --- */
