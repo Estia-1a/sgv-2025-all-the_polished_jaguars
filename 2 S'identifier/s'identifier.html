@@ -17,15 +17,19 @@
     <h2>Se connecter</h2>
 
     <form class="reset-form" action="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html" method="post">
-        <input type="text" name="username" placeholder="Saisir son identifiant" required>
-        <input type="password" name="password" placeholder="Saisir son mot de passe" required>
 
-        <div class="login-links" style="display: flex; justify-content: space-between; font-size: 0.9em;">
+        <label for="username" class="sr-only">Identifiant</label>
+        <input type="text" id="username" name="username" placeholder="Saisir son identifiant" required>
+
+        <label for="password" class="sr-only">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Saisir son mot de passe" required>
+
+        <div class="login-links">
             <a href="../4 mot de passe oublié/index.html">Mot de passe oublié ?</a>
-            <a href="../3_creer_un_compte/creer_compte.html">Créer un compte </a>
+            <a href="../3_creer_un_compte/creer_compte.html">Créer un compte</a>
         </div>
 
-        <button type="submit">Se connecter </button> 
+        <button type="submit">Se connecter</button>
 
     </form>
 </section>

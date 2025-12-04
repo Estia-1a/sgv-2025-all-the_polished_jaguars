@@ -6,287 +6,295 @@
     <title>Données personnelles – BihotzZen</title>
     <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body>
- 
+
 <header>
     <h1>BihotzZen</h1>
     <nav>
         <a href="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html">Accueil</a>
-        <a href="../5 Modifier données perso/index.html">Modifier donnée personnelle</a>
-        <a href="../6 choisir domaine/choisir_domaine.html">Consulter des conseils selon un domaine</a>
+        <a href="../5 Modifier données perso/index.html">Modifier données personnelles</a>
+        <a href="../6 choisir domaine/choisir_domaine.html">Consulter des conseils</a>
     </nav>
 </header>
- 
+
 <main class="container-form">
     <h2 class="big-title">Données personnelles</h2>
- 
+
+    <!-- ================= INFORMATIONS DE BASE ================= -->
     <section class="form-section">
         <h3>Informations de base</h3>
- 
+
         <label for="nom">Nom</label>
         <input id="nom" type="text">
- 
+
         <label for="prenom">Prénom</label>
         <input id="prenom" type="text">
- 
+
         <label for="sexe">Sexe / Genre</label>
         <select id="sexe">
-            <option value="" disabled selected>Choisir une option</option>
+            <option value="" disabled selected>Choisissez une option</option>
             <option value="homme">Homme</option>
             <option value="femme">Femme</option>
             <option value="nonbinaire">Non-binaire</option>
             <option value="autre">Autre</option>
-            <option value="nepasdire">Préférer ne pas répondre</option>
+            <option value="nepasdire">Je préfère ne pas répondre</option>
         </select>
- 
+
         <label for="naissance">Date de naissance</label>
         <input id="naissance" type="date">
- 
+
         <label for="taille">Taille (cm)</label>
-        <input id="taille" type="number">
- 
+        <input id="taille" type="number" min="0">
+
         <label for="poids">Poids (kg)</label>
-        <input id="poids" type="number">
- 
+        <input id="poids" type="number" min="0">
+
         <label for="imc">IMC</label>
-        <input id="imc" type="number" step="0.1">
- 
+        <input id="imc" type="number" step="0.1" min="0">
+
         <label for="allergies">Allergies</label>
         <textarea id="allergies"></textarea>
- 
+
         <label for="antecedents">Antécédents médicaux importants</label>
         <textarea id="antecedents"></textarea>
- 
+
         <label for="traitements">Traitements / Médicaments actuels</label>
         <textarea id="traitements"></textarea>
     </section>
- 
+
+    <!-- ================= SANTÉ PHYSIQUE ================= -->
     <section class="form-section">
         <h3>Santé physique</h3>
- 
+
         <h4>Douleurs & symptômes</h4>
- 
+
         <label for="douleurs">Localisation des douleurs</label>
         <input id="douleurs" type="text">
- 
+
         <label for="freq_douleurs">Fréquence des douleurs</label>
         <input id="freq_douleurs" type="text">
- 
+
         <label for="intensite">Intensité (1 à 10)</label>
         <input id="intensite" type="number" min="1" max="10">
- 
+
         <h4>Activité physique</h4>
- 
+
         <label for="activites">Type d'activités</label>
         <input id="activites" type="text">
- 
+
         <label for="frequence_sport">Fréquence (jours/semaine)</label>
         <input id="frequence_sport" type="number" min="0" max="7">
- 
+
         <label for="duree_sport">Durée moyenne (minutes)</label>
-        <input id="duree_sport" type="number">
- 
+        <input id="duree_sport" type="number" min="0">
+
         <label for="niveau_sport">Niveau</label>
         <select id="niveau_sport">
-            <option value="" disabled selected>Choisir</option>
+            <option value="" disabled selected>Choisissez</option>
             <option value="debutant">Débutant</option>
             <option value="intermediaire">Intermédiaire</option>
             <option value="avance">Avancé</option>
         </select>
- 
+
         <h4>État général</h4>
- 
+
         <label for="fatigue">Niveau de fatigue</label>
         <input id="fatigue" type="text">
- 
+
         <label for="energie">Niveau d’énergie</label>
         <input id="energie" type="text">
- 
+
         <label for="variation_poids">Variations de poids récentes</label>
         <input id="variation_poids" type="text">
- 
+
         <h4>Santé spécifique</h4>
- 
+
         <label for="tension">Tension artérielle</label>
         <input id="tension" type="text">
- 
+
         <label for="fc_repos">Fréquence cardiaque au repos</label>
-        <input id="fc_repos" type="number">
- 
+        <input id="fc_repos" type="number" min="0">
+
         <label for="respiration">Problèmes respiratoires</label>
         <textarea id="respiration"></textarea>
- 
+
         <label for="blessures">Antécédents de blessures</label>
         <textarea id="blessures"></textarea>
     </section>
- 
+
+    <!-- ================= SANTÉ MENTALE ================= -->
     <section class="form-section">
         <h3>Santé mentale</h3>
- 
+
         <h4>État émotionnel</h4>
- 
+
         <label for="stress">Niveau de stress</label>
         <input id="stress" type="text">
- 
+
         <label for="anxiete">Anxiété</label>
         <select id="anxiete">
-            <option value="" disabled selected>Choisir</option>
+            <option value="" disabled selected>Choisissez</option>
             <option value="faible">Faible</option>
             <option value="moderee">Modérée</option>
             <option value="elevee">Élevée</option>
         </select>
- 
+
         <label for="humeur">Humeur générale</label>
         <select id="humeur">
             <option value="bonne">Bonne</option>
             <option value="instable">Instable</option>
             <option value="depressive">Dépressive</option>
         </select>
- 
+
         <label for="tristesse">Moments de tristesse / irritabilité</label>
         <textarea id="tristesse"></textarea>
- 
+
         <h4>Habitudes & comportements</h4>
- 
+
         <label for="concentration">Capacité de concentration</label>
         <input id="concentration" type="text">
- 
+
         <label for="motivation">Motivation</label>
         <input id="motivation" type="text">
- 
+
         <label for="relations">Relations sociales</label>
         <select id="relations">
             <option value="bonnes">Bonnes</option>
             <option value="isolees">Isolées</option>
             <option value="conflits">Conflits</option>
         </select>
- 
+
         <label for="emotions">Gestion des émotions</label>
         <textarea id="emotions"></textarea>
- 
+
         <h4>Historique personnel</h4>
- 
+
         <label for="antecedents_psy">Antécédents psychologiques</label>
         <textarea id="antecedents_psy"></textarea>
- 
+
         <label for="suivi_psy">Suivi actuel</label>
         <textarea id="suivi_psy"></textarea>
- 
+
         <label for="meds_psy">Médicaments liés à la santé mentale</label>
         <textarea id="meds_psy"></textarea>
     </section>
- 
+
+    <!-- ================= SOMMEIL ================= -->
     <section class="form-section">
         <h3>Sommeil</h3>
- 
+
         <h4>Quantité</h4>
- 
+
         <label for="duree_sommeil">Heures de sommeil par nuit</label>
         <input id="duree_sommeil" type="number" min="0" max="24">
- 
+
         <label for="heure_coucher">Heure de coucher</label>
         <input id="heure_coucher" type="time">
- 
+
         <label for="heure_reveil">Heure de réveil</label>
         <input id="heure_reveil" type="time">
- 
+
         <label for="siestes">Siestes</label>
         <input id="siestes" type="text">
- 
+
         <h4>Qualité</h4>
- 
+
         <label for="reveils">Réveils nocturnes</label>
         <input id="reveils" type="text">
- 
+
         <label for="difficulte_endormissement">Difficulté d’endormissement</label>
         <input id="difficulte_endormissement" type="text">
- 
+
         <label for="repos">Sensation de repos</label>
         <input id="repos" type="text">
- 
+
         <label for="cauchemars">Cauchemars</label>
         <input id="cauchemars" type="text">
- 
-        <h4>Troubles du sommeil</h4>
- 
+
+        <h4>Troubles</h4>
+
         <label for="insomnie">Insomnie</label>
         <input id="insomnie" type="text">
- 
+
         <label for="apnees">Apnées du sommeil</label>
         <input id="apnees" type="text">
- 
+
         <label for="ronflements">Ronflements</label>
         <input id="ronflements" type="text">
- 
+
         <label for="agitation">Sommeil agité</label>
         <input id="agitation" type="text">
- 
+
         <h4>Contexte</h4>
- 
+
         <label for="ecrans">Écrans avant de dormir</label>
         <input id="ecrans" type="text">
- 
+
         <label for="boissons">Boissons excitantes le soir</label>
         <input id="boissons" type="text">
- 
+
         <label for="stress_nuit">Niveau de stress avant le coucher</label>
         <input id="stress_nuit" type="text">
     </section>
- 
+
+    <!-- ================= ALIMENTATION ================= -->
     <section class="form-section">
         <h3>Alimentation</h3>
- 
+
         <h4>Habitudes alimentaires</h4>
- 
+
         <label for="repas_jour">Nombre de repas par jour</label>
         <input id="repas_jour" type="number" min="1" max="8">
- 
+
         <label for="heure_repas">Heure des repas</label>
         <input id="heure_repas" type="text">
- 
+
         <label for="snacks">Snacks / grignotage</label>
         <input id="snacks" type="text">
- 
+
         <label for="boissons_jour">Boissons quotidiennes</label>
         <input id="boissons_jour" type="text">
- 
+
         <h4>Qualité & équilibre</h4>
- 
+
         <label for="fruits_legumes">Fruits et légumes</label>
         <input id="fruits_legumes" type="text">
- 
+
         <label for="proteines">Protéines</label>
         <input id="proteines" type="text">
- 
+
         <label for="sucres_gras">Produits sucrés / gras</label>
         <input id="sucres_gras" type="text">
- 
+
         <h4>Régimes & restrictions</h4>
- 
+
         <label for="regime">Régime</label>
         <select id="regime">
+            <option value="" disabled selected>Choisissez</option>
             <option value="vg">Végétarien</option>
             <option value="vegan">Végétalien</option>
             <option value="gluten">Sans gluten</option>
             <option value="lactose">Sans lactose</option>
             <option value="aucun">Aucun</option>
         </select>
- 
+
         <label for="intolerances">Allergies ou intolérances</label>
         <textarea id="intolerances"></textarea>
     </section>
- 
+
+    <!-- ================= VALIDATION ================= -->
     <div class="form-submit">
         <button type="button" id="validateBtn" class="submit-btn">Valider mes données</button>
         <a class="submit-btn" href="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html">Retour à l'accueil</a>
     </div>
 </main>
- 
+
 <footer>
     <p>© 2025 - BihotzZen</p>
 </footer>
- 
+
+<!-- POPUP -->
 <div id="popup" class="popup-overlay">
     <div class="popup-box">
         <h3>Données enregistrées</h3>
@@ -294,21 +302,20 @@
         <button id="closePopup">OK</button>
     </div>
 </div>
- 
+
 <script>
     const validateBtn = document.getElementById("validateBtn");
     const popup = document.getElementById("popup");
     const closePopup = document.getElementById("closePopup");
- 
-    validateBtn.addEventListener("click", function () {
+
+    validateBtn.addEventListener("click", () => {
         popup.style.display = "flex";
     });
- 
-    closePopup.addEventListener("click", function () {
+
+    closePopup.addEventListener("click", () => {
         popup.style.display = "none";
     });
 </script>
- 
+
 </body>
 </html>
- 

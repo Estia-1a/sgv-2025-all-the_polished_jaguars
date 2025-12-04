@@ -1,73 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Discussion avec Dr. Mathilde Neuil – BihotzZen</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion avec Dr. Mathilde Neuil – BihotzZen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
+<header>
     <h1>BihotzZen</h1>
+
     <nav>
-      <a href="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html">Accueil</a>
-      <a href="../5 Modifier données perso/index.html">Modifier donnée personnelle</a>
-      <a href="../6 choisir domaine/choisir_domaine.html">Consulter des conseils selon un domaine</a>
+        <a href="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html">Accueil</a>
+        <a href="../5 Modifier données perso/index.html">Modifier donnée personnelle</a>
+        <a href="../6 choisir domaine/choisir_domaine.html">Consulter des conseils selon un domaine</a>
     </nav>
+</header>
 
-  </header>
+<main>
 
- <section class="espace">
-    <div class="doctor-profile">
-      <img src="../media/pictures/Médecins/Medecin femme1.jpg" alt="Dr. Mathilde Neuil">
-      <h2>Dr. Mathilde Neuil</h2>
-    </div>
+    <!-- Profil du médecin -->
+    <section class="espace">
+        <div class="doctor-profile">
+            <img src="../media/pictures/Médecins/Medecin femme1.jpg" alt="Portrait du Dr Mathilde Neuil">
+            <h2>Dr. Mathilde Neuil</h2>
+        </div>
 
-    <p>Posez vos questions sur la santé physique : mobilité, douleurs musculaires, récupération, posture…</p>
-</section>
+        <p>Posez vos questions sur la santé physique : mobilité, douleurs musculaires, récupération, posture…</p>
+    </section>
 
-  <div class="chat-container">
-    <div class="chat-header">Thème : Sommeil</div>
+    <!-- Zone de discussion -->
+    <section class="chat-container">
+        <div class="chat-header">Thème : Sommeil</div>
 
-    <div class="chat-box" id="chatBox">
-      <div class="chat-message doctor"><strong>Dr. Neuil :</strong> Bonjour, comment puis-je vous aider aujourd’hui ?</div>
-    </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-message doctor">
+                <strong>Dr. Neuil :</strong> Bonjour, comment puis-je vous aider aujourd’hui ?
+            </div>
+        </div>
 
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Écrivez votre message ici..." />
-      <button onclick="sendMessage()">Envoyer</button>
-    </div>
-  </div>
+        <div class="chat-input">
+            <label for="userInput" class="sr-only">Votre message</label>
+            <input type="text" id="userInput" placeholder="Écrivez votre message ici…">
+            <button type="button" id="sendBtn">Envoyer</button>
+        </div>
+    </section>
 
-  <footer>
+</main>
+
+<footer>
     <p>© 2025 - BihotzZen</p>
-  </footer>
+</footer>
 
-  <script>
+<script>
     function sendMessage() {
-      const input = document.getElementById("userInput");
-      const chatBox = document.getElementById("chatBox");
-      const message = input.value.trim();
+        const input = document.getElementById("userInput");
+        const chatBox = document.getElementById("chatBox");
+        const message = input.value.trim();
 
-      if (message !== "") {
-        const userMsg = document.createElement("div");
-        userMsg.className = "chat-message user";
-        userMsg.innerHTML = `<strong>Vous :</strong> ${message}`;
-        chatBox.appendChild(userMsg);
-        chatBox.scrollTop = chatBox.scrollHeight;
-        input.value = "";
+        if (message !== "") {
+            const userMsg = document.createElement("div");
+            userMsg.className = "chat-message user";
+            userMsg.innerHTML = "<strong>Vous :</strong> " + message;
+            chatBox.appendChild(userMsg);
 
-        setTimeout(() => {
-          const reply = document.createElement("div");
-          reply.className = "chat-message doctor";
-          reply.innerHTML = `<strong>Dr. Neuil :</strong> Merci pour votre message. Je vous réponds dans quelques instants.`;
-          chatBox.appendChild(reply);
-          chatBox.scrollTop = chatBox.scrollHeight;
-        }, 1000);
-      }
+            chatBox.scrollTop = chatBox.scrollHeight;
+            input.value = "";
+
+            setTimeout(() => {
+                const reply = document.createElement("div");
+                reply.className = "chat-message doctor";
+                reply.innerHTML = "<strong>Dr. Neuil :</strong> Merci pour votre message. Je vous réponds dans quelques instants.";
+                chatBox.appendChild(reply);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+        }
     }
-  </script>
+
+    document.getElementById("sendBtn").addEventListener("click", sendMessage);
+    document.getElementById("userInput").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            sendMessage();
+        }
+    });
+</script>
 
 </body>
 </html>

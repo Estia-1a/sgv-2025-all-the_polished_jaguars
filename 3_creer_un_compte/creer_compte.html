@@ -17,12 +17,18 @@
     <h2>Créer un compte</h2>
 
     <form class="reset-form" action="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html" method="post">
-        <input type="text" name="username" placeholder="Saisir un identifiant" required>
-        <input type="password" name="password" placeholder="Saisir un mot de passe" required>
-        <input type="email" name="email" placeholder="Saisir une adresse email" required>
+
+        <label for="username" class="sr-only">Identifiant</label>
+        <input type="text" id="username" name="username" placeholder="Saisir un identifiant" required>
+
+        <label for="password" class="sr-only">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Saisir un mot de passe" required>
+
+        <label for="email" class="sr-only">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="Saisir une adresse email" required>
 
         <button type="submit">S'inscrire</button>
-        
+
     </form>
 </section>
 

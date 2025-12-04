@@ -1,7 +1,10 @@
-/* --- STRUCTURE GÉNÉRALE --- */
+/* =========================================================
+   STRUCTURE GÉNÉRALE
+   ========================================================= */
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
@@ -9,7 +12,9 @@ html, body {
     color: #333;
 }
 
-/* --- HEADER + NAVIGATION --- */
+/* =========================================================
+   HEADER & NAVIGATION
+   ========================================================= */
 header {
     background-color: #7fb4a6;
     color: white;
@@ -18,82 +23,82 @@ header {
     align-items: center;
     justify-content: space-between;
 }
- 
+
+header h1 {
+    margin: 0;
+}
+
 nav {
     flex: 1;
     text-align: center;
 }
- 
+
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
- 
+
 nav a:hover {
     text-decoration: underline;
 }
- 
-.login-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 6px 12px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
- 
-.login-btn:hover {
-    background-color: white;
-    color: #7fb4a6;
-}
 
-/* --- TITRE PRINCIPAL --- */
+/* =========================================================
+   TITRES PRINCIPAUX
+   ========================================================= */
 .big-title {
     text-align: center;
     font-size: 2.4rem;
     margin: 40px 0 20px 0;
+    color: #2f3e46;
 }
 
-/* --- CONTENEUR FORMULAIRE --- */
+/* =========================================================
+   CONTENEUR FORMULAIRE
+   ========================================================= */
 .container-form {
     width: 85%;
     max-width: 1100px;
     margin: 0 auto 60px auto;
 }
 
-/* --- SECTIONS DU FORMULAIRE --- */
+/* =========================================================
+   SECTIONS DU FORMULAIRE
+   ========================================================= */
 .form-section {
     background-color: white;
     padding: 35px 40px;
     border-radius: 8px;
     margin-top: 35px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
 .form-section h3 {
     font-size: 1.7rem;
-    margin-bottom: 15px;
     color: #2f3e46;
+    margin-top: 0;
 }
 
 .form-section h4 {
     font-size: 1.3rem;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 10px;
     color: #425a61;
 }
 
-/* --- LABELS --- */
+/* =========================================================
+   LABELS
+   ========================================================= */
 label {
     display: block;
     font-weight: bold;
     margin: 15px 0 6px 3%;
 }
 
-/* --- CHAMPS --- */
+/* =========================================================
+   CHAMPS DE FORMULAIRE
+   ========================================================= */
 input,
 select,
 textarea {
@@ -105,7 +110,7 @@ textarea {
     border: 1px solid #8aa4a1;
     border-radius: 6px;
     background-color: #fff;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 input:focus,
@@ -117,11 +122,13 @@ textarea:focus {
 }
 
 textarea {
-    min-height: 80px;
     resize: vertical;
+    min-height: 80px;
 }
 
-/* --- BOUTONS FINAUX --- */
+/* =========================================================
+   BOUTONS FINAUX
+   ========================================================= */
 .form-submit {
     text-align: center;
     margin-top: 40px;
@@ -137,7 +144,7 @@ textarea {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
     display: inline-block;
     margin: 5px;
 }
@@ -152,16 +159,9 @@ textarea {
     transform: translateY(0);
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: #2f3e46;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: auto;
-}
-
-/* --- POPUP --- */
+/* =========================================================
+   POPUP DE VALIDATION
+   ========================================================= */
 .popup-overlay {
     display: none;
     position: fixed;
@@ -192,14 +192,29 @@ footer {
     font-size: 1rem;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .popup-box button:hover {
     background-color: #6aa191;
 }
 
-/* --- RESPONSIVE --- */
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    background-color: #2f3e46;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* =========================================================
+   RESPONSIVE (MOBILES & TABLETTES)
+   ========================================================= */
 @media (max-width: 768px) {
+
     .big-title {
         font-size: 2rem;
     }
