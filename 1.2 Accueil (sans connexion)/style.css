@@ -1,4 +1,4 @@
-/* --- BASE GÉNÉRALE --- */
+
 html, body {
     margin: 0;
     height: 100%;
@@ -9,7 +9,7 @@ html, body {
     color: #333;
 }
 
-/* --- HEADER + NAVIGATION --- */
+
 header {
     background-color: #7fb4a6;
     padding: 20px;
@@ -35,7 +35,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- SECTION PRINCIPALE --- */
+
 .espace {
     background-color: white;
     margin: 20px;
@@ -44,7 +44,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* --- ITEM LIST (image gauche / texte droite) --- */
 .grid-container {
     width: 85%;
     margin: auto;
@@ -80,7 +79,6 @@ nav a:hover {
     color: #4b5c5a;
 }
 
-/* --- FOOTER --- */
 footer {
     margin-top: auto;
     background-color: #2f3e46;
@@ -89,7 +87,7 @@ footer {
     padding: 15px;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
     .item {
         flex-direction: column;
