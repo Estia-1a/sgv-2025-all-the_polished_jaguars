@@ -121,7 +121,7 @@ footer {
         height: auto;
     }
 }
-
+ 
 /* Bouton spécial pour parler avec un médecin */
 .medecin-btn {
     background-color: #7fb4a6;   /* vert doux */
@@ -133,10 +133,11 @@ footer {
     display: inline-block;
     transition: 0.3s;
 }
-
+ 
 .medecin-btn:hover {
     background-color: #6aa191;   /* vert plus foncé au survol */
 }
-
+ 
+ 
  
  

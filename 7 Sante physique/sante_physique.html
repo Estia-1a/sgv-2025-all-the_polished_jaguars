@@ -1,111 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Santé physique – BihotzZen</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé physique – BihotzZen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
+<header>
     <h1>BihotzZen</h1>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="mental.html">Modifier donnée personnelle</a>
-      <a href="conseils.html">Conseils domaine</a>
+        <a href="index.html">Accueil</a>
+        <a href="mental.html">Modifier donnée personnelle</a>
+        <a href="conseils.html">Conseils domaine</a>
     </nav>
-  </header>
+</header>
 
-  <section class="espace">
+<section class="espace">
     <h2>Santé physique</h2>
     <p>Explorez des conseils variés pour prendre soin de votre corps et préserver votre énergie.</p>
 
+    <a href="chat-medecin.html" class="medecin-btn">Communiquer avec un médecin</a>
+</section>
 
-        <a href="chat-medecin.html" class="medecin-btn">Communiquer avec un médecin</a>
-    </div>
-  </section>
+<!-- Grille des cartes -->
+<div class="grid-physique">
 
-
-  <div class="grid-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px;">
-
-
-    <div class="item" style="flex-direction:column; text-align:center;">
-      <img src="../media/pictures/santé physique/bouger_chaque_jour.jpg" alt= "Bouger chaque jour" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-      <div class="item-text">
+    <div class="card">
+        <img src="../media/pictures/santé physique/bouger_chaque_jour.jpg" alt="Bouger chaque jour">
         <h4>Bouger chaque jour</h4>
         <p>30 minutes d’activité physique quotidienne suffisent pour renforcer le cœur et réduire le stress.</p>
-      </div>
     </div>
 
+    <div class="card">
+        <img src="../media/pictures/santé physique/etirement.jpg" alt="Étirements quotidiens">
+        <h4>Étirements quotidiens</h4>
+        <p>Quelques minutes d’étirements matin et soir améliorent la souplesse et préviennent les douleurs.</p>
+    </div>
 
-   <div class="item" style="flex-direction:column; text-align:center;">
-  <img src="../media/pictures/santé physique/etirement.jpg" alt="Étirements quotidiens" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-  <div class="item-text">
-    <h4>Étirements quotidiens</h4>
-    <p>Quelques minutes d’étirements matin et soir améliorent la souplesse, préviennent les douleurs et favorisent la détente musculaire.</p>
-  </div>
-</div>
-
-
-    <div class="item" style="flex-direction:column; text-align:center;">
-      <img src="../media/pictures/santé physique/hydratation.jpg" alt="Hydratation" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-      <div class="item-text">
+    <div class="card">
+        <img src="../media/pictures/santé physique/hydratation.jpg" alt="Hydratation">
         <h4>Hydratation</h4>
         <p>Buvez régulièrement de l’eau pour soutenir vos muscles et améliorer la concentration.</p>
-      </div>
     </div>
 
-        <div class="item" style="flex-direction:column; text-align:center;">
-      <img src="../media/pictures/santé physique/Repos et récupération.jpg" alt="Repos et récupération" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-      <div class="item-text">
+    <div class="card">
+        <img src="../media/pictures/santé physique/Repos et récupération.jpg" alt="Repos et récupération">
         <h4>Repos et récupération</h4>
-        <p>Un sommeil de qualité et des pauses après l’effort sont essentiels pour éviter les blessures.</p>
-      </div>
+        <p>Un bon sommeil et des pauses après l’effort sont essentiels pour éviter les blessures.</p>
     </div>
 
-
-
-
-    <div class="item" style="flex-direction:column; text-align:center;">
-      <img src="../media/pictures/santé physique/posture.jpg" alt="Posture" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-      <div class="item-text">
+    <div class="card">
+        <img src="../media/pictures/santé physique/posture.jpg" alt="Posture">
         <h4>Posture</h4>
         <p>Gardez le dos droit et alternez les positions pour protéger vos articulations.</p>
-      </div>
     </div>
 
-   <div class="item" style="flex-direction:column; text-align:center;">
-  <img src="../media/pictures/santé physique/respiration.jpg" alt="Respiration consciente" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-  <div class="item-text">
-    <h4>Respiration consciente</h4>
-    <p>Prendre 5 minutes pour respirer profondément aide à réduire le stress, oxygéner le corps et retrouver de la clarté mentale.</p>
-  </div>
+    <div class="card">
+        <img src="../media/pictures/santé physique/respiration.jpg" alt="Respiration consciente">
+        <h4>Respiration consciente</h4>
+        <p>Respirer profondément pendant 5 minutes aide à réduire le stress et oxygéner le corps.</p>
+    </div>
+
+    <div class="card">
+        <img src="../media/pictures/santé physique/exposition_soleil.jpg" alt="Exposition au soleil">
+        <h4>Exposition au soleil</h4>
+        <p>15 minutes de lumière naturelle renforcent la vitamine D et le système immunitaire.</p>
+    </div>
+
+    <div class="card">
+        <img src="../media/pictures/santé physique/alimentation_equilibre.jpg" alt="Alimentation équilibrée">
+        <h4>Alimentation équilibrée</h4>
+        <p>Mangez varié pour soutenir votre énergie et améliorer la récupération physique.</p>
+    </div>
+
 </div>
 
-
-    <div class="item" style="flex-direction:column; text-align:center;">
-      <img src="../media/pictures/santé physique/exposition_soleil.jpg" alt="Exposition au soleil" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-      <div class="item-text">
-        <h4>Exposition au soleil</h4>
-        <p>15 minutes de lumière naturelle par jour stimulent la vitamine D et renforcent l’immunité.</p>
-      </div>
-    </div>
-
-
-    <div class="item" style="flex-direction:column; text-align:center;">
-      <img src="../media/pictures/santé physique/alimentation_equilibre.jpg" alt="Alimentation équilibrée" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
-      <div class="item-text">
-        <h4>Alimentation équilibrée</h4>
-        <p>Associez fruits, légumes, protéines et céréales complètes pour soutenir votre énergie et votre récupération physique.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <footer>
+<footer>
     <p>© 2025 - BihotzZen</p>
-  </footer>
+</footer>
 
 </body>
 </html>
