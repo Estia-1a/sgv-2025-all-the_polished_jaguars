@@ -1,4 +1,4 @@
-/* --- BASE GÉNÉRALE --- */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ html, body {
     color: #333;
 }
 
-/* --- HEADER & NAVIGATION --- */
+
 header {
     background-color: #7fb4a6;
     padding: 20px;
@@ -50,7 +50,7 @@ nav a:hover {
     color: #7fb4a6;
 }
 
-/* --- SECTION ACCUEIL --- */
+
 .espace {
     background-color: white;
     margin: 20px;
@@ -59,7 +59,7 @@ nav a:hover {
     text-align: center;
 }
 
-/* --- CARDS GRID --- */
+
 .grid-container {
     width: 90%;
     margin: auto;
@@ -94,7 +94,7 @@ nav a:hover {
     line-height: 1.4;
 }
 
-/* --- FOOTER --- */
+
 footer {
     background-color: #2f3e46;
     color: white;
@@ -103,7 +103,7 @@ footer {
     margin-top: auto;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
     .item img {
         height: 200px;
