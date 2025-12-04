@@ -195,3 +195,13 @@ footer {
 .chat-input button:hover {
   background-color: #6aa191;
 }
+
+.doctor-profile img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;  /* même forme que les cartes médecins */
+    border: none;         /* pas de cadre */
+    box-shadow: none;     /* pas d’ombre */
+}
+
