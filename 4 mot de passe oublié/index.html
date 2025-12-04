@@ -16,16 +16,14 @@
 <section class="reset-container">
     <h2>Récupérer son mot de passe et identifiant</h2>
 
-    <form class="reset-form">
-
+    <form class="reset-form" method="post">
         <input type="email" placeholder="Adresse email" required>
+        <button class="mode-btn" type="submit">Réinitialiser le mot de passe</button>
+    </form>
 
-        <!-- BOUTON CLIQUABLE -->
-        <button class="mode-btn">Je souhaite modifier mon mot de passe</button>
-
-        <input type="password" placeholder="Saisir le mot de passe">
-        <input type="text" placeholder="Saisir l'identifiant">
-
+    <form class="reset-form" action="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html" method="post">
+        <input type="password" placeholder="Saisir le mot de passe" required>
+        <input type="text" placeholder="Saisir l'identifiant" required>
         <button type="submit">Se connecter</button>
     </form>
 </section>
