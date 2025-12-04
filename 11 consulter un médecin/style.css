@@ -35,21 +35,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.login-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 6px 12px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.login-btn:hover {
-    background-color: white;
-    color: #7fb4a6;
-}
-
 /* --- SECTION D’ACCUEIL --- */
 .espace {
     background-color: white;
@@ -94,11 +79,14 @@ nav a:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
+/* --- IMAGE MÉDECIN (SANS CADRE) --- */
 .doctor-card img {
     width: 160px;
     height: 160px;
     object-fit: cover;
-    border: 3px solid #555;
+    border-radius: 10px;   /* juste un arrondi doux */
+    border: none;          /* suppression du cadre foncé */
+    box-shadow: none;      /* pas d’ombre autour */
 }
 
 /* --- TEXTE DOCTEUR --- */
@@ -113,27 +101,25 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* --- BOUTON CONTACT --- */
 /* --- BOUTON CONTACT (style image) --- */
 .button-medecin {
-    background-color: #7eb1a7;      /* vert pastel identique à l'image */
-    color: white;                   /* texte blanc */
+    background-color: #7eb1a7;
+    color: white;
     font-weight: bold;
     font-size: 1rem;
-    padding: 12px 28px;             /* taille du bouton */
-    border: none;                   /* pas de bordure noire */
-    border-radius: 12px;            /* arrondi */
-    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 12px;
     text-decoration: none;
+    display: inline-block;
     transition: 0.2s ease;
 }
 
 .button-medecin:hover {
-    background-color: #6aa093;      /* léger foncé au survol */
+    background-color: #6aa093;
     transform: translateY(-2px);
     box-shadow: 0px 4px 6px rgba(0,0,0,0.15);
 }
-
 
 /* --- FOOTER --- */
 footer {
@@ -156,4 +142,3 @@ footer {
         text-align: center;
     }
 }
-
