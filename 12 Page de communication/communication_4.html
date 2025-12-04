@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discussion avec Dr. Sabine Tricot – BihotzZen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>BihotzZen</h1>
+    <nav>
+      <a href="../1.2 Accueil (sans connexion)/acceuil_sans_connexion.html">Accueil</a>
+      <a href="../5 Modifier données perso/index.html">Modifier donnée personnelle</a>
+      <a href="../6 choisir domaine/choisir_domaine.html">Consulter des conseils selon un domaine</a>
+    </nav>
+
+  </header>
+
+  <section class="espace">
+    <h2>Discussion avec Dr. Sabine Tricot</h2>
+  </section>
+
+  <div class="chat-container">
+    <div class="chat-header">Thème : Santé mentale </div>
+
+    <div class="chat-box" id="chatBox">
+      <div class="chat-message doctor"><strong>Dr. Tricot :</strong> Bonjour, comment puis-je vous aider aujourd’hui ?</div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Écrivez votre message ici..." />
+      <button onclick="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 - BihotzZen</p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatBox = document.getElementById("chatBox");
+      const message = input.value.trim();
+
+      if (message !== "") {
+        const userMsg = document.createElement("div");
+        userMsg.className = "chat-message user";
+        userMsg.innerHTML = `<strong>Vous :</strong> ${message}`;
+        chatBox.appendChild(userMsg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        input.value = "";
+
+        setTimeout(() => {
+          const reply = document.createElement("div");
+          reply.className = "chat-message doctor";
+          reply.innerHTML = `<strong>Dr. Tricot :</strong> Merci pour votre message. Je vous réponds dans quelques instants.`;
+          chatBox.appendChild(reply);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 1000);
+      }
+    }
+  </script>
+
+</body>
+</html>
