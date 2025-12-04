@@ -1,4 +1,3 @@
-/* --- STRUCTURE GÉNÉRALE --- */
 html, body {
     height: 100%;
     margin: 0;
@@ -9,7 +8,7 @@ html, body {
     color: #333;
 }
 
-/* --- HEADER + NAVIGATION --- */
+
 header {
     background-color: #7fb4a6;
     color: #ffffff;
@@ -50,7 +49,7 @@ nav a:hover {
     color: #7fb4a6;
 }
 
-/* --- SECTION ESPACE --- */
+
 .espace {
     background-color: #ffffff;
     text-align: center;
@@ -59,7 +58,7 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* --- GRILLE --- */
+
 .grid-container {
     display: flex;
     flex-direction: column;
@@ -68,7 +67,7 @@ nav a:hover {
     margin: auto;
 }
 
-/* --- ITEM --- */
+
 .item {
     display: flex;
     align-items: flex-start;
@@ -97,7 +96,7 @@ nav a:hover {
     margin: 0;
 }
 
-/* --- FOOTER --- */
+
 footer {
     background-color: #2f3e46;
     color: #ffffff;
@@ -106,7 +105,7 @@ footer {
     margin-top: auto;
 }
 
-/* --- LIENS CLIQUABLES --- */
+
 .clickable {
     text-decoration: none;
     color: inherit;
@@ -118,7 +117,7 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* --- CHAT --- */
+
 .chat-container {
     background-color: #ffffff;
     margin: 20px auto;
@@ -189,7 +188,7 @@ footer {
     background-color: #6aa191;
 }
 
-/* --- PROFIL MÉDECIN --- */
+
 .doctor-profile img {
     width: 160px;
     height: 160px;
@@ -199,7 +198,7 @@ footer {
     box-shadow: none;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
     .item {
         flex-direction: column;
