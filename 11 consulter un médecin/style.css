@@ -9,18 +9,14 @@ html, body {
     color: #333;
 }
 
-/* --- HEADER --- */
+/* --- HEADER + NAVIGATION --- */
 header {
     background-color: #7fb4a6;
     color: white;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-header h1 {
-    margin: 0;
+    justify-content: space-between;
 }
 
 nav {
@@ -37,6 +33,30 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.login-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #7fb4a6;
+}
+
+/* --- SECTION D’ACCUEIL --- */
+.espace {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 8px;
 }
 
 /* --- TITRE DE PAGE --- */
