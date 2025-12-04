@@ -1,0 +1,139 @@
+/* --- STRUCTURE GÉNÉRALE --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #eef6f4;
+    color: #333;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- TITRE DE PAGE --- */
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.page-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-title h3 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    color: #2f3e46;
+}
+
+/* --- GRILLE MÉDECINS --- */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 85%;
+    margin: 40px auto;
+}
+
+.doctor-card {
+    background: white;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.doctor-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid #555;
+}
+
+/* --- TEXTE DOCTEUR --- */
+.doctor-info h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #2f3e46;
+}
+
+.doctor-info p {
+    margin: 10px 0 20px 0;
+    font-size: 0.95rem;
+}
+
+/* --- BOUTON CONTACT --- */
+/* --- BOUTON CONTACT (style image) --- */
+.button-medecin {
+    background-color: #7eb1a7;      /* vert pastel identique à l'image */
+    color: white;                   /* texte blanc */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 28px;             /* taille du bouton */
+    border: none;                   /* pas de bordure noire */
+    border-radius: 12px;            /* arrondi */
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.button-medecin:hover {
+    background-color: #6aa093;      /* léger foncé au survol */
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.15);
+}
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #2f3e46;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
