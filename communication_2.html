@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discussion avec Dr. Stéphane Garnier – BihotzZen</title>
+    <title>Discussion avec Dr. Mathilde Neuil – BihotzZen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="page-chat">
+
 
 <header>
     <h1>BihotzZen</h1>
+
     <nav>
         <a href="../1.2_Accueil_(sans_connexion)/acceuil_sans_connexion.html">Accueil</a>
         <a href="../5_Modifier_données_perso/modifierlesdonnées.html">Modifier donnée personnelle</a>
@@ -22,19 +24,19 @@
 
     <section class="espace">
         <div class="doctor-profile">
-            <img src="../media/pictures/Médecins/medecin_homme 1.jpg" alt="Portrait du Dr Stéphane Garnier">
-            <h2>Dr. Stéphane Garnier</h2>
+            <img src="../media/pictures/Médecins/Medecin_femme1.jpg" alt="Portrait du Dr Mathilde Neuil">
+            <h2>Dr. Mathilde Neuil</h2>
         </div>
 
         <p>Posez vos questions sur la santé physique : mobilité, douleurs musculaires, récupération, posture…</p>
     </section>
 
     <section class="chat-container">
-        <div class="chat-header">Thème : Santé physique</div>
+        <div class="chat-header">Thème : Sommeil</div>
 
         <div class="chat-box" id="chatBox">
             <div class="chat-message doctor">
-                <strong>Dr. Garnier :</strong> Bonjour, comment puis-je vous aider aujourd’hui ?
+                <strong>Dr. Neuil :</strong> Bonjour, comment puis-je vous aider aujourd’hui ?
             </div>
         </div>
 
@@ -69,7 +71,7 @@
             setTimeout(() => {
                 const reply = document.createElement("div");
                 reply.className = "chat-message doctor";
-                reply.innerHTML = "<strong>Dr. Garnier :</strong> Merci pour votre message. Je vous réponds dans quelques instants.";
+                reply.innerHTML = "<strong>Dr. Neuil :</strong> Merci pour votre message. Je vous réponds dans quelques instants.";
                 chatBox.appendChild(reply);
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 1000);
