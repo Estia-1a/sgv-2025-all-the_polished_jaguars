@@ -74,43 +74,49 @@ footer {
 }
 
 .page-accueil .grid-container {
-    width: 90%;
+    width: 85%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .page-accueil .item {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    text-align: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .page-accueil .item img {
-    width: 100%;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .page-accueil .item-text h3 {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     color: #2f3e46;
 }
 
 .page-accueil .item-text p {
     margin: 0;
+    line-height: 1.5;
     color: #4b5c5a;
-    line-height: 1.4;
 }
 
-/* Responsive Accueil */
 @media (max-width: 768px) {
+    .page-accueil .item {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .page-accueil .item img {
-        height: 200px;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -133,6 +139,11 @@ footer {
     font-size: 2rem;
 }
 
+.page-sidentifier .sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
 .page-sidentifier .reset-container {
     background-color: white;
     width: 50%;
@@ -147,11 +158,6 @@ footer {
     margin-top: 0;
 }
 
-.page-sidentifier .sr-only {
-    position: absolute;
-    left: -9999px;
-}
-
 .page-sidentifier .reset-form {
     display: flex;
     flex-direction: column;
@@ -159,12 +165,29 @@ footer {
 }
 
 .page-sidentifier .reset-form input {
+    width: 80%;
     padding: 12px;
-    font-size: 1rem;
+    margin: 0 auto;
+    font-size: 1em;
     border: 1px solid #bbb;
     border-radius: 6px;
-    width: 80%;
+}
+
+.page-sidentifier .reset-form button {
+    background-color: #7fb4a6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%;
     margin: 0 auto;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+.page-sidentifier .reset-form button:hover {
+    background-color: #6aa191;
 }
 
 .page-sidentifier .login-links {
@@ -184,24 +207,6 @@ footer {
     text-decoration: underline;
 }
 
-.page-sidentifier .reset-form button {
-    background-color: #7fb4a6;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    width: 60%;
-    margin: 0 auto;
-    transition: background-color 0.3s ease;
-}
-
-.page-sidentifier .reset-form button:hover {
-    background-color: #6aa191;
-}
-
-/* Responsive S'identifier */
 @media (max-width: 768px) {
     .page-sidentifier .reset-container {
         width: 90%;
@@ -211,5 +216,1174 @@ footer {
     .page-sidentifier .reset-form button,
     .page-sidentifier .login-links {
         width: 100%;
+    }
+}
+
+
+/* ============================================
+   🟩 PAGE CRÉER UN COMPTE
+============================================= */
+
+.page-creer-compte header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-creer-compte header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.page-creer-compte .sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+.page-creer-compte .reset-container {
+    background-color: white;
+    width: 50%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-creer-compte .reset-container h2 {
+    margin-top: 0;
+}
+
+.page-creer-compte .reset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-creer-compte .reset-form input {
+    width: 80%;
+    padding: 12px;
+    margin: 0 auto;
+    font-size: 1em;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+.page-creer-compte .reset-form button {
+    background-color: #7fb4a6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+.page-creer-compte .reset-form button:hover {
+    background-color: #6aa191;
+}
+
+@media (max-width: 768px) {
+    .page-creer-compte .reset-container {
+        width: 90%;
+    }
+
+    .page-creer-compte .reset-form input,
+    .page-creer-compte .reset-form button {
+        width: 100%;
+    }
+}
+
+
+/* ============================================
+   🟨 PAGE MOT DE PASSE OUBLIÉ
+============================================= */
+
+.page-mdp-oublie header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-mdp-oublie header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.page-mdp-oublie .sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+.page-mdp-oublie .reset-container {
+    background-color: white;
+    width: 50%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-mdp-oublie .reset-container h2 {
+    margin-top: 0;
+}
+
+.page-mdp-oublie .reset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-mdp-oublie .reset-form input {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-mdp-oublie .mode-btn {
+    background-color: #dfe7e5;
+    border: 1px solid #a9b7b3;
+    padding: 12px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s ease;
+}
+
+.page-mdp-oublie .mode-btn:hover {
+    background-color: #cfd9d7;
+}
+
+.page-mdp-oublie .mode-btn:active {
+    background-color: #bfcac8;
+    transform: scale(0.98);
+}
+
+.page-mdp-oublie .reset-form button[type="submit"] {
+    background-color: #7fb4a6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 30px;
+    transition: 0.3s ease; 
+}
+
+.page-mdp-oublie .reset-form button[type="submit"]:hover {
+    background-color: #6aa191;
+}
+
+@media (max-width: 768px) {
+    .page-mdp-oublie .reset-container {
+        width: 90%;
+    }
+
+    .page-mdp-oublie .reset-form input,
+    .page-mdp-oublie .mode-btn,
+    .page-mdp-oublie .reset-form button[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   🟪 PAGE MODIFIER DONNÉES PERSONNELLES
+============================================= */
+
+.page-modifier-donnees header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-modifier-donnees header h1 {
+    margin: 0;
+}
+
+.page-modifier-donnees nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-modifier-donnees nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-modifier-donnees nav a:hover {
+    text-decoration: underline;
+}
+
+.page-modifier-donnees .big-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 40px 0 20px 0;
+    color: #2f3e46;
+}
+
+.page-modifier-donnees .container-form {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+}
+
+.page-modifier-donnees .form-section {
+    background-color: white;
+    padding: 35px 40px;
+    border-radius: 8px;
+    margin-top: 35px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.page-modifier-donnees .form-section h3 {
+    font-size: 1.7rem;
+    color: #2f3e46;
+    margin-top: 0;
+}
+
+.page-modifier-donnees .form-section h4 {
+    font-size: 1.3rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #425a61;
+}
+
+.page-modifier-donnees label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 6px 3%;
+}
+
+.page-modifier-donnees input,
+.page-modifier-donnees select,
+.page-modifier-donnees textarea {
+    width: 95%;
+    margin: 0 auto 15px auto;
+    display: block;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #8aa4a1;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: 0.2s ease;
+}
+
+.page-modifier-donnees input:focus,
+.page-modifier-donnees select:focus,
+.page-modifier-donnees textarea:focus {
+    border-color: #7fb4a6;
+    box-shadow: 0 0 4px rgba(127, 180, 166, 0.6);
+    outline: none;
+}
+
+.page-modifier-donnees textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.page-modifier-donnees .form-submit {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.page-modifier-donnees .submit-btn {
+    background-color: #7fb4a6;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+}
+
+.page-modifier-donnees .submit-btn:hover {
+    background-color: #6aa191;
+    transform: translateY(-2px);
+}
+
+.page-modifier-donnees .submit-btn:active {
+    background-color: #629488;
+    transform: translateY(0);
+}
+
+.page-modifier-donnees .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.page-modifier-donnees .popup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.page-modifier-donnees .popup-box button {
+    background-color: #7fb4a6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.page-modifier-donnees .popup-box button:hover {
+    background-color: #6aa191;
+}
+
+@media (max-width: 768px) {
+
+    .page-modifier-donnees .big-title {
+        font-size: 2rem;
+    }
+
+    .page-modifier-donnees .form-section {
+        padding: 25px;
+    }
+
+    .page-modifier-donnees input,
+    .page-modifier-donnees select,
+    .page-modifier-donnees textarea {
+        width: 98%;
+        padding: 10px;
+    }
+
+    .page-modifier-donnees label {
+        margin-left: 1%;
+    }
+
+    .page-modifier-donnees nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   🟧 PAGE CONSEILS SELON UN DOMAINE
+============================================= */
+
+.page-conseils header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-conseils nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-conseils nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-conseils nav a:hover {
+    text-decoration: underline;
+}
+
+.page-conseils .espace {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.page-conseils .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: auto auto 40px auto;
+}
+
+.page-conseils .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.page-conseils .item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.page-conseils .item-text {
+    flex: 1;
+}
+
+.page-conseils .item-text h4 {
+    margin: 0 0 10px 0;
+}
+
+.page-conseils .item-text p {
+    margin: 0;
+}
+
+.page-conseils .clickable {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.page-conseils .clickable:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .page-conseils .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .page-conseils .item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ============================================
+   🟦 PAGE DOMAINE SPÉCIFIQUE
+============================================= */
+
+.page-domaine header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-domaine nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-domaine nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-domaine nav a:hover {
+    text-decoration: underline;
+}
+
+.page-domaine .espace {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.page-domaine .medecin-btn {
+    background-color: #7fb4a6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.page-domaine .medecin-btn:hover {
+    background-color: #6aa191;
+}
+
+.page-domaine .grid-physique {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.page-domaine .card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-domaine .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.page-domaine .card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #2f3e46;
+}
+
+.page-domaine .card p {
+    font-size: 0.95rem;
+    color: #4b5c5a;
+}
+
+@media (max-width: 600px) {
+    .page-domaine .grid-physique {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   💜 PAGE SOMMEIL
+============================================= */
+
+.page-sommeil header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-sommeil nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-sommeil nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-sommeil nav a:hover {
+    text-decoration: underline;
+}
+
+.page-sommeil .espace {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.page-sommeil .medecin-btn {
+    display: inline-block;
+    background-color: #7fb4a6;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.page-sommeil .medecin-btn:hover {
+    background-color: #6aa191;
+}
+
+.page-sommeil .grid-sommeil {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.page-sommeil .card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-sommeil .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.page-sommeil .card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #2f3e46;
+}
+
+.page-sommeil .card p {
+    font-size: 0.95rem;
+    color: #4b5c5a;
+}
+
+@media (max-width: 600px) {
+    .page-sommeil .grid-sommeil {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   🥗 PAGE ALIMENTATION
+============================================= */
+
+.page-alimentation header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-alimentation nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-alimentation nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-alimentation nav a:hover {
+    text-decoration: underline;
+}
+
+.page-alimentation .espace {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.page-alimentation .medecin-btn {
+    display: inline-block;
+    background-color: #7fb4a6;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.page-alimentation .medecin-btn:hover {
+    background-color: #6aa191;
+}
+
+.page-alimentation .grid-alimentation {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.page-alimentation .card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-alimentation .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.page-alimentation .card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #2f3e46;
+}
+
+.page-alimentation .card p {
+    font-size: 0.95rem;
+    color: #4b5c5a;
+}
+
+@media (max-width: 600px) {
+    .page-alimentation .grid-alimentation {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   🧠 PAGE SANTÉ MENTALE
+============================================= */
+
+.page-mentale header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-mentale nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-mentale nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-mentale nav a:hover {
+    text-decoration: underline;
+}
+
+.page-mentale .espace {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.page-mentale .medecin-btn {
+    display: inline-block;
+    background-color: #7fb4a6;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.page-mentale .medecin-btn:hover {
+    background-color: #6aa191;
+}
+
+.page-mentale .grid-mentale {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.page-mentale .card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-mentale .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.page-mentale .card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #2f3e46;
+}
+
+.page-mentale .card p {
+    font-size: 0.95rem;
+    color: #4b5c5a;
+}
+
+@media (max-width: 600px) {
+    .page-mentale .grid-mentale {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   🩺 PAGE MÉDECINS / SPÉCIALISTES
+============================================= */
+
+.page-medecins header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-medecins nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-medecins nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-medecins nav a:hover {
+    text-decoration: underline;
+}
+
+.page-medecins .page-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.page-medecins .page-title h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.page-medecins .page-title p {
+    font-size: 1rem;
+    color: #4b5c5a;
+}
+
+.page-medecins .doctors-grid {
+    width: 85%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 35px;
+}
+
+.page-medecins .doctor-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-medecins .doctor-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: none;
+}
+
+.page-medecins .doctor-info h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #2f3e46;
+}
+
+.page-medecins .domain {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #6a827d;
+    font-size: 0.95rem;
+}
+
+.page-medecins .doctor-info p {
+    margin: 12px 0 20px 0;
+    font-size: 0.95rem;
+    color: #4b5c5a;
+}
+
+.page-medecins .button-medecin {
+    background-color: #7fb4a6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.page-medecins .button-medecin:hover {
+    background-color: #6aa191;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .page-medecins .doctor-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* ============================================
+   💬 PAGE CHAT MÉDECIN
+============================================= */
+
+.page-chat header {
+    background-color: #7fb4a6;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-chat nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-chat nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.page-chat nav a:hover {
+    text-decoration: underline;
+}
+
+.page-chat .login-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.page-chat .login-btn:hover {
+    background-color: #ffffff;
+    color: #7fb4a6;
+}
+
+.page-chat .espace {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.page-chat .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.page-chat .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.page-chat .item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.page-chat .item-text {
+    flex: 1;
+}
+
+.page-chat .item-text h4 {
+    margin: 0 0 10px 0;
+}
+
+.page-chat .item-text p {
+    margin: 0;
+}
+
+.page-chat footer {
+    background-color: #2f3e46;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+.page-chat .clickable {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.page-chat .clickable:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- CHAT UI ---- */
+
+.page-chat .chat-container {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page-chat .chat-header {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0a8f8c;
+}
+
+.page-chat .chat-box {
+    background-color: #eef6f4;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 0.95rem;
+}
+
+.page-chat .chat-message {
+    margin-bottom: 10px;
+}
+
+.page-chat .chat-message.doctor {
+    text-align: left;
+    color: #2f3e46;
+}
+
+.page-chat .chat-message.user {
+    text-align: right;
+    color: #7fb4a6;
+}
+
+.page-chat .chat-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.page-chat .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+}
+
+.page-chat .chat-input button {
+    padding: 10px 16px;
+    background-color: #7fb4a6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.page-chat .chat-input button:hover {
+    background-color: #6aa191;
+}
+
+.page-chat .doctor-profile img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .page-chat .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .page-chat .item img {
+        width: 100%;
+        height: auto;
     }
 }
