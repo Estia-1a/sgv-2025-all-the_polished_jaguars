@@ -1,3 +1,6 @@
+/* ============================================
+   🌍 STYLES GLOBAUX (communs)
+============================================= */
 
 html, body {
     margin: 0;
@@ -10,91 +13,6 @@ html, body {
     color: #333;
 }
 
-
-header {
-    background-color: #7fb4a6;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-}
-
-nav {
-    flex: 1;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 15px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.login-btn {
-    color: white;
-    text-decoration: none;
-    border: 2px solid white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.login-btn:hover {
-    background-color: white;
-    color: #7fb4a6;
-}
-
-
-.espace {
-    background-color: white;
-    margin: 20px;
-    padding: 50px 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-
-.grid-container {
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.item {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-}
-
-.item img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.item-text h3 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: #2f3e46;
-}
-
-.item-text p {
-    margin: 0;
-    color: #4b5c5a;
-    line-height: 1.4;
-}
-
-
 footer {
     background-color: #2f3e46;
     color: white;
@@ -104,8 +22,194 @@ footer {
 }
 
 
+/* ============================================
+   🟦 PAGE ACCUEIL
+============================================= */
+
+.page-accueil header {
+    background-color: #7fb4a6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.page-accueil nav {
+    flex: 1;
+    text-align: center;
+}
+
+.page-accueil nav a {
+    margin: 0 15px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page-accueil nav a:hover {
+    text-decoration: underline;
+}
+
+.page-accueil .login-btn {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.page-accueil .login-btn:hover {
+    background-color: white;
+    color: #7fb4a6;
+}
+
+.page-accueil .espace {
+    background-color: white;
+    margin: 20px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.page-accueil .grid-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.page-accueil .item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.page-accueil .item img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.page-accueil .item-text h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #2f3e46;
+}
+
+.page-accueil .item-text p {
+    margin: 0;
+    color: #4b5c5a;
+    line-height: 1.4;
+}
+
+/* Responsive Accueil */
 @media (max-width: 768px) {
-    .item img {
+    .page-accueil .item img {
         height: 200px;
+    }
+}
+
+
+/* ============================================
+   🟥 PAGE S'IDENTIFIER
+============================================= */
+
+.page-sidentifier header {
+    background-color: #7fb4a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-sidentifier header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.page-sidentifier .reset-container {
+    background-color: white;
+    width: 50%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-sidentifier .reset-container h2 {
+    margin-top: 0;
+}
+
+.page-sidentifier .sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+.page-sidentifier .reset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-sidentifier .reset-form input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-sidentifier .login-links {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.page-sidentifier .login-links a {
+    color: #2f3e46;
+    text-decoration: none;
+}
+
+.page-sidentifier .login-links a:hover {
+    text-decoration: underline;
+}
+
+.page-sidentifier .reset-form button {
+    background-color: #7fb4a6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 60%;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.page-sidentifier .reset-form button:hover {
+    background-color: #6aa191;
+}
+
+/* Responsive S'identifier */
+@media (max-width: 768px) {
+    .page-sidentifier .reset-container {
+        width: 90%;
+    }
+
+    .page-sidentifier .reset-form input,
+    .page-sidentifier .reset-form button,
+    .page-sidentifier .login-links {
+        width: 100%;
     }
 }
